@@ -1,3 +1,13 @@
 # LabosMoviles
 
-![Labo 01 - Calculo BMI](./Screenshot/Screenshot_20230330_135030.png)
+## Labo 01
+<div> 
+<img src="./Screenshot/Lab01.png" width="200">
+</div>
+<br>
+
+## Labo 02
+<div> 
+<img src="./Screenshot/Lab02.png" width="200">
+</div>
+
