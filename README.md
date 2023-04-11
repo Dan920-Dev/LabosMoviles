@@ -16,5 +16,5 @@
 ## Labo 03
 
 <div> 
-<img src="./Screenshot/Labo03.png" width="200">
+<img src="./Screenshot/labo03.png" width="200">
 </div>
