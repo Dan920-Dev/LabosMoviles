@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_outlineEditText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toTopOf="@+id/email_outlineEditText"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_optimizationLevel="chains"
+        tools:layout_editor_absoluteX="13dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_outlineEditText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:hint="Correo"
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toTopOf="@+id/phone_outlineEditText"
+        app:layout_constraintEnd_toEndOf="@+id/name_outlineEditText"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/name_outlineEditText"
+        app:layout_constraintTop_toBottomOf="@+id/name_outlineEditText"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_optimizationLevel="chains">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_outlineEditText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:hint="Numero de telefono"
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toTopOf="@+id/containedButton"
+        app:layout_constraintEnd_toEndOf="@+id/email_outlineEditText"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/email_outlineEditText"
+        app:layout_constraintTop_toBottomOf="@+id/email_outlineEditText"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_optimizationLevel="chains">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/containedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:chainUseRtl="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/phone_outlineEditText"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/phone_outlineEditText"
+        app:layout_constraintTop_toBottomOf="@+id/phone_outlineEditText"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_optimizationLevel="chains" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
