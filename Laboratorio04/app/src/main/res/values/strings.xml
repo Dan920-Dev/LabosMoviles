@@ -7,4 +7,5 @@
     <string name="save">Guardar</string>
     <string name="description">Rellena la siguiente \ninformacion</string>
     <string name="description2">Confirma tu informacion</string>
+    <string name="campo_vacio">ERROR, campo vacio</string>
 </resources>

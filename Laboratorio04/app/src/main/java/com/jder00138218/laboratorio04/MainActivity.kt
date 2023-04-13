@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,11 +13,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var nameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var phoneEditText: EditText
+    private lateinit var  errorMessageTextView: TextView
 
     // Data
     private var name = ""
-    private var phone = 0
+    private var phone = ""
     private var email = ""
+    private var flag  = true
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,9 +27,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         bind()
 
-        saveButton.setOnClickListener {
-            onSend()
-        }
+
+            saveButton.setOnClickListener {
+
+                if (nameEditText.text.isEmpty() or phoneEditText.text.isEmpty() or emailEditText.text.isEmpty()){
+                    errorMessageTextView.text = getString(R.string.campo_vacio)
+                    flag = false
+                }else{
+                    flag = true
+                }
+
+                if (flag == true)
+                    onSend()
+            }
+
 
     }
 
@@ -35,13 +49,15 @@ class MainActivity : AppCompatActivity() {
         nameEditText = findViewById(R.id.name_editText)
         phoneEditText = findViewById(R.id.phone_editText)
         emailEditText = findViewById(R.id.email_editText)
+        errorMessageTextView = findViewById(R.id.error_message)
     }
 
     private fun onSend(){
+
         // Data
         name = nameEditText.text.toString()
         email = emailEditText.text.toString()
-        phone = phoneEditText.text.toString().toInt()
+        phone = phoneEditText.text.toString()
 
         // Intent
         val intent = Intent(this, ShareActivity::class.java)

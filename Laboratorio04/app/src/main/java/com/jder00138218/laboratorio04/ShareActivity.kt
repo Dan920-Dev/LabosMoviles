@@ -1,17 +1,16 @@
 package com.jder00138218.laboratorio04
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class ShareActivity : AppCompatActivity() {
 
     // Data
     private var name = ""
-    private var phone = 0
+    private var phone = ""
     private var email = ""
 
     // Views
@@ -29,7 +28,7 @@ class ShareActivity : AppCompatActivity() {
         intent?.let { intent ->
             name = (intent.getStringExtra(MainActivity.KEY_NAME_USER)).toString()
             email = (intent.getStringExtra(MainActivity.KEY_EMAIL_USER)).toString()
-            phone = intent.getIntExtra(MainActivity.KEY_PHONE_USER, 0)
+            phone = (intent.getStringExtra(MainActivity.KEY_PHONE_USER)).toString()
         }
 
         information(name, email, phone)
@@ -47,13 +46,14 @@ class ShareActivity : AppCompatActivity() {
         emailTextView = findViewById(R.id.email_share_textView)
     }
 
-   private  fun information(name: String, email: String, phone: Int){
+   private  fun information(name: String, email: String, phone: String){
         nameTextView.text = name
-        phoneTextView.text = phone.toString()
+        phoneTextView.text = phone
         emailTextView.text = email
     }
 
-    private fun share(name: String, email: String, phone: Int){
+    private fun share(name: String, email: String, phone: String){
+
         val information = getString(R.string.name) + ": ${name}\n"  +
                           getString(R.string.phone_number) + ": ${phone}\n" +
                           getString(R.string.email) + ": ${email}"
