@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/min_gap"
     tools:context=".ShareActivity">
 
     <TextView
@@ -11,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/extra_max_gap"
-        android:text="Confirma tu informacion"
+        android:text="@string/description2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/max_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/name_share__textView"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/min_gap"
         android:text="@string/email"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -77,6 +82,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/min_gap"
         android:text="@string/phone_number"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/max_gap"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/share"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_share_textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -92,7 +92,7 @@
         android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guardar"
+        android:text="@string/save"
         android:backgroundTint="@color/button_color"
         android:textColor="@color/black"
 
@@ -109,7 +109,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rellena la siguiente \ninformacion"
+        android:text="@string/description"
         android:textColor="@color/black"
         android:textSize="@dimen/max_size"
         app:layout_constraintBottom_toTopOf="@+id/name_outlineEditText"

@@ -3,4 +3,8 @@
     <string name="phone_number">Numero de telefono</string>
     <string name="email">Correo Electronico</string>
     <string name="name">Nombre</string>
+    <string name="share">Compartir</string>
+    <string name="save">Guardar</string>
+    <string name="description">Rellena la siguiente \ninformacion</string>
+    <string name="description2">Confirma tu informacion</string>
 </resources>
