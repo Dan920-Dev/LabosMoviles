@@ -1,5 +1,6 @@
 package com.jder00138218.laboratorio04
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -33,6 +34,10 @@ class ShareActivity : AppCompatActivity() {
 
         information(name, email, phone)
 
+        shareButton.setOnClickListener {
+            share(name, email, phone)
+        }
+
     }
 
     private fun bind(){
@@ -42,9 +47,28 @@ class ShareActivity : AppCompatActivity() {
         emailTextView = findViewById(R.id.email_share_textView)
     }
 
-    fun information(name: String, email: String, phone: Int){
+   private  fun information(name: String, email: String, phone: Int){
         nameTextView.text = name
         phoneTextView.text = phone.toString()
         emailTextView.text = email
     }
+
+    private fun share(name: String, email: String, phone: Int){
+        val information = getString(R.string.name) + ": ${name}\n"  +
+                          getString(R.string.phone_number) + ": ${phone}\n" +
+                          getString(R.string.email) + ": ${email}"
+
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, information)
+            type = "text/plain"
+        }
+
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        startActivity(shareIntent)
+
+
+    }
+
+
 }
