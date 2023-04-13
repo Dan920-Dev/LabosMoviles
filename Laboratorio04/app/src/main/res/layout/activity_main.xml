@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="@dimen/medium_gap"
     tools:context=".MainActivity">
 
 
@@ -12,19 +12,23 @@
         android:id="@+id/name_outlineEditText"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-        android:hint="Nombre"
+        android:hint="@string/name"
+
+        app:hintTextColor="@color/main_color"
+        app:boxStrokeColor="@color/main_color"
         app:chainUseRtl="false"
         app:layout_constraintBottom_toTopOf="@+id/email_outlineEditText"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_optimizationLevel="chains"
-        tools:layout_editor_absoluteX="13dp">
+        app:layout_optimizationLevel="chains">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
@@ -35,9 +39,11 @@
         android:id="@+id/email_outlineEditText"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-        android:hint="Correo"
+        android:hint="@string/email"
+
+        app:hintTextColor="@color/main_color"
+        app:boxStrokeColor="@color/main_color"
         app:chainUseRtl="false"
         app:layout_constraintBottom_toTopOf="@+id/phone_outlineEditText"
         app:layout_constraintEnd_toEndOf="@+id/name_outlineEditText"
@@ -48,6 +54,7 @@
         app:layout_optimizationLevel="chains">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
@@ -58,30 +65,37 @@
         android:id="@+id/phone_outlineEditText"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-        android:hint="Numero de telefono"
+        android:hint="@string/phone_number"
+        android:outlineSpotShadowColor="@color/black"
+
+        app:hintTextColor="@color/main_color"
         app:chainUseRtl="false"
-        app:layout_constraintBottom_toTopOf="@+id/containedButton"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"
         app:layout_constraintEnd_toEndOf="@+id/email_outlineEditText"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@+id/email_outlineEditText"
         app:layout_constraintTop_toBottomOf="@+id/email_outlineEditText"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_optimizationLevel="chains">
+        app:layout_optimizationLevel="chains"
+        app:boxStrokeColor="@color/main_color">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone" />
+            android:inputType="phone"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/containedButton"
+        android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guardar"
+        android:backgroundTint="@color/button_color"
+        android:textColor="@color/black"
+
         app:chainUseRtl="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/phone_outlineEditText"
@@ -90,5 +104,15 @@
         app:layout_constraintTop_toBottomOf="@+id/phone_outlineEditText"
         app:layout_constraintVertical_bias="0.5"
         app:layout_optimizationLevel="chains" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rellena la siguiente \ninformacion"
+        android:textColor="@color/black"
+        android:textSize="@dimen/max_size"
+        app:layout_constraintBottom_toTopOf="@+id/name_outlineEditText"
+        tools:layout_editor_absoluteX="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

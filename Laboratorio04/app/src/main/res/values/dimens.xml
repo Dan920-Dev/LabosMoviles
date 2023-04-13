@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_gap">16dp</dimen>
+    <dimen name="max_size">24sp</dimen>
+    <dimen name="min_gap">8dp</dimen>
+    <dimen name="max_gap">24dp</dimen>
+    <dimen name="extra_max_gap">288dp</dimen>
+</resources>
