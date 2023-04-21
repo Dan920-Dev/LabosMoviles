@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newMovieFragment"
+    android:padding="@dimen/min_gap">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/max_gap"
+            android:text="New Movie"
+            android:textColor="@color/white"
+            android:textSize="@dimen/max_gap_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/name_textImput"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/name_textImput"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_textImput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/max_gap"
+            android:hint="Name"
+            app:hintTextColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/category_editText"
+            app:layout_constraintEnd_toEndOf="@+id/category_editText"
+            app:layout_constraintStart_toStartOf="@+id/category_editText"
+            app:layout_constraintTop_toBottomOf="@+id/text_title"
+            android:layout_marginTop="@dimen/max_gap"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/category_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/max_gap"
+            android:hint="Category"
+            app:layout_constraintBottom_toTopOf="@+id/description_editText"
+            app:layout_constraintEnd_toEndOf="@+id/description_editText"
+            app:layout_constraintStart_toStartOf="@+id/description_editText"
+            app:layout_constraintTop_toBottomOf="@+id/name_textImput"
+            app:layout_constraintVertical_bias="0.5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/description_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/max_gap"
+            android:hint="Description"
+            app:layout_constraintBottom_toTopOf="@+id/calification_editText"
+            app:layout_constraintEnd_toEndOf="@+id/calification_editText"
+            app:layout_constraintStart_toStartOf="@+id/calification_editText"
+            app:layout_constraintTop_toBottomOf="@+id/category_editText"
+            app:layout_constraintVertical_bias="0.5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/calification_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Calification"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_editText"
+            app:layout_constraintVertical_bias="0.5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttonColor"
+            android:text="submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calification_editText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
