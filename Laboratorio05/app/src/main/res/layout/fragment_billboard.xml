@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/min_gap"
-    tools:context=".BillboardFragment">
+    tools:context=".ui.movie.BillboardFragment">
 
     <TextView
         android:id="@+id/textView2"
@@ -82,7 +82,8 @@
         app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toTopOf="@+id/add_movie"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="@dimen/medium_gap">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

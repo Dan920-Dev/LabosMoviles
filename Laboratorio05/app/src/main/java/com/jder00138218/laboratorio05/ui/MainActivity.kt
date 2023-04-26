@@ -1,11 +1,8 @@
-package com.jder00138218.laboratorio05
+package com.jder00138218.laboratorio05.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import androidx.navigation.findNavController
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.jder00138218.laboratorio05.R
 
 class MainActivity : AppCompatActivity() {
 

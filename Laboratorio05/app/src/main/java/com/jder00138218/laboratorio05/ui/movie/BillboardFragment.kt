@@ -1,16 +1,14 @@
-package com.jder00138218.laboratorio05
+package com.jder00138218.laboratorio05.ui.movie
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.FragmentContainer
-import androidx.fragment.app.FragmentContainerView
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.jder00138218.laboratorio05.R
 
 
 class BillboardFragment : Fragment() {

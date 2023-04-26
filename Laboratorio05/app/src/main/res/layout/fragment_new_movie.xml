@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newMovieFragment"
+    tools:context=".ui.newMovieFragment"
     android:padding="@dimen/min_gap">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,6 +33,7 @@
             android:layout_marginBottom="@dimen/max_gap"
             android:hint="Name"
             app:hintTextColor="@color/white"
+
             app:layout_constraintBottom_toTopOf="@+id/category_editText"
             app:layout_constraintEnd_toEndOf="@+id/category_editText"
             app:layout_constraintStart_toStartOf="@+id/category_editText"
@@ -43,6 +44,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/cardLayout"
                 android:textColor="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,7 +62,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/cardLayout"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -77,7 +80,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/cardLayout"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -92,7 +96,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/cardLayout"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
