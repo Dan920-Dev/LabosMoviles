@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Laboratorio 05</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_of_movie">description</string>
+    <string name="socre_movie">000</string>
+    <string name="description_star_wars">Star Wars, conocida también en español como La guerra de las galaxias,789 es una franquicia y universo compartido de fantasía compuesta primordialmente de una serie de películas concebidas por el cineasta estadounidense George Lucas en la década de 1970, y producidas y distribuidas inicialmente por 20th Century Fox y posteriormente por The Walt Disney Company a partir de 2012.</string>
+</resources>
